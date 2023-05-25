@@ -72,7 +72,9 @@ class Amenity(TimeStampedModel):
         max_length=150,
     )
     description = models.TextField(
-        verbose_name="소개"
+        verbose_name="소개",
+        null=True,
+        blank=True,
     )
 
     class Meta:
