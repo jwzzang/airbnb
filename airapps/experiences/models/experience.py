@@ -54,6 +54,10 @@ class Experience(TimeStampedModel):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "체험"
+        verbose_name_plural = "체험 관리"
+
 
 class Perk(TimeStampedModel):
     name = models.CharField(
@@ -76,5 +80,5 @@ class Perk(TimeStampedModel):
         return self.name
 
     class Meta:
-        verbose_name = "체험"
-        verbose_name_plural = "체험 관리"
+        verbose_name = "특전"
+        verbose_name_plural = "특전 관리"
