@@ -65,6 +65,9 @@ class Room(TimeStampedModel):
         blank=True,
     )
 
+    def __str__(self):
+        return self.name
+
 
 class Amenity(TimeStampedModel):
     name = models.CharField(
@@ -76,6 +79,9 @@ class Amenity(TimeStampedModel):
         null=True,
         blank=True,
     )
+
+    def __str__(self):
+        return self.name
 
     class Meta:
         verbose_name_plural = "Amenities"
