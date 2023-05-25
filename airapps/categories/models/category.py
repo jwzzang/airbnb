@@ -16,3 +16,9 @@ class Category(TimeStampedModel):
         max_length=20,
         choices=CategoryKindChoices.choices
     )
+
+    def __str__(self):
+        return f"{self.kind.title()}: {self.name}"
+
+    class Meta:
+        verbose_name_plural = "Categories"
