@@ -68,6 +68,13 @@ class Room(TimeStampedModel):
     def __str__(self):
         return self.name
 
+    def total_amenities(self):
+        return self.amenities.count()
+
+    class Meta:
+        verbose_name = "방"
+        verbose_name_plural = "방 관리"
+
 
 class Amenity(TimeStampedModel):
     name = models.CharField(
