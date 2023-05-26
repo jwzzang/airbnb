@@ -71,6 +71,16 @@ class Room(TimeStampedModel):
     def total_amenities(self):
         return self.amenities.count()
 
+    def rating(room):
+        count = room.reviews.count()
+        if count == 0:
+            return "No Reviews"
+        else:
+            total_rating = 0
+            for review in room.reviews.all().values("rating"):
+                total_rating += review["rating"]
+                return round(total_rating / count, 1)
+
     class Meta:
         verbose_name = "방"
         verbose_name_plural = "방 관리"
