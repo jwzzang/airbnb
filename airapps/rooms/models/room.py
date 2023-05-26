@@ -91,4 +91,5 @@ class Amenity(TimeStampedModel):
         return self.name
 
     class Meta:
-        verbose_name_plural = "Amenities"
+        verbose_name = "어메니티"
+        verbose_name_plural = "어메니티 관리"
